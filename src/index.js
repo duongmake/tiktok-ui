@@ -4,7 +4,7 @@ import App from '~/App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from './components/GlobalStyles';
 
-// 99 35:16
+// 101 28:40
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
