@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCircleQuestion,
   faCircleXmark,
-  faCloudUpload,
   faCoins,
   faEarthAsia,
   faEllipsisVertical,
@@ -25,6 +24,8 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -141,7 +142,7 @@ function Header() {
             <>
               <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                 <button className={cx('action-btn')}>
-                  <FontAwesomeIcon icon={faCloudUpload} />
+                  <UploadIcon />
                 </button>
               </Tippy>
             </>
@@ -154,9 +155,9 @@ function Header() {
 
           <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
-              <img
-                src="https://p9-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/dc511e407ba1e210ece549eab38b55e7~tplv-tiktokx-cropcenter:100:100.jpg?dr=14579&refresh_token=bd7f647b&x-expires=1755262800&x-signature=MXFPRZ08aduqyfYFw8wcYjUMj%2Fs%3D&t=4d5b0474&ps=13740610&shp=30310797&shcp=ff37627b&idc=sg1"
+              <Image
                 className={cx('user-avatar')}
+                src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/abecad92099d039abda6a1d74d46d9d9~tplv-tiktokx-cropcenter:100:100.jpeg?dr=14579&refresh_token=5f51180e&x-expires=1755417600&x-signature=kFSgS8Z9hEJgsTjHkYX9M9gD6NA%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=sg1"
                 alt="Nguyen Van A"
               />
             ) : (
